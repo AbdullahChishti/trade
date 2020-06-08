@@ -1,0 +1,14 @@
+<div *ngFor="let stock of stockList">
+  <button (click)="sendISIN(stock.ISIN)" value="{{stock.ISIN}}">{{stock.name}}</button>
+</div>
+
+<mat-card *ngFor="let stock of stockPrices">
+  <h3>
+    ISIN: {{stock?.isin}}<br>
+    Stock price: {{stock?.price}}
+  </h3>
+  <button (click)="unsubscribeToChannel(stock.isin)">delete me</button>
+</mat-card>
+<br>
+
+
